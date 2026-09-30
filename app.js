@@ -1,5 +1,5 @@
 // ===== KONFIGURASI: isi sesuai Project Settings → API =====
-const SUPABASE_URL = 'https://mykqpjrpopwiuaybpyyz.supabase.co/rest/v1/';
+const SUPABASE_URL = 'https://mykqpjrpopwiuaybpyyz.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_wMI4r-ij1-9nsFWkG22tYQ_9EDVL5LM';
 const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const $ = (id) => document.getElementById(id);
