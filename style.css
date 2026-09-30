@@ -1,0 +1,32 @@
+:root{--bg:#F6F6F4;--card:#fff;--line:#E6E6E1;--tx:#111;--tx2:#5A5A55;--or:#FF6A00;--or2:#D95500;--gr:#9ACD32;--bk:#0D0D0D}
+[data-theme=dark]{--bg:#0D0D0D;--card:#171717;--line:#2E2E2E;--tx:#F5F5F5;--tx2:#B8B8B8;--or2:#FF6A00}
+[data-theme=dark] .form-control,[data-theme=dark] .form-select,[data-theme=dark] .table{background:var(--card);color:var(--tx);border-color:var(--line)}
+body{background:var(--bg);color:var(--tx);font-family:'Plus Jakarta Sans',sans-serif;transition:background .3s,color .3s}
+h2,.brand,.badge-d{font-family:'Barlow Condensed',sans-serif;letter-spacing:.03em;text-transform:uppercase}
+.topbar{position:sticky;top:0;z-index:20;display:flex;gap:10px;align-items:center;background:var(--bk);padding:10px 16px}
+.brand{color:#fff;font-size:28px;font-weight:700;text-decoration:none}.brand i{color:var(--or);font-style:normal}
+.search{flex:1;min-width:0;border-radius:10px}.cat{width:150px;border-radius:10px}
+.icon{background:#222;color:#fff;border:0;border-radius:10px;padding:8px 12px}
+.wrap{max-width:1240px;margin:0 auto;padding:16px}
+.card-box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0}
+.btn-jio{background:var(--or);color:#0D0D0D;border:0;border-radius:10px;padding:10px 18px;font-weight:700}.btn-jio:hover{background:var(--or2)}
+.btn-tk{background:var(--gr);color:#0D0D0D;border:0;border-radius:10px;padding:12px;font-weight:700;width:100%}
+.btn-ghost{background:transparent;color:var(--tx);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+.banner{background:linear-gradient(120deg,#0D0D0D,var(--or));color:#fff;border-radius:18px;padding:40px 24px;font:700 clamp(28px,5vw,56px)/1 'Barlow Condensed';text-transform:uppercase}
+.social{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.social a{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gr);border-radius:14px;padding:14px;color:var(--tx);text-decoration:none;font-weight:600}
+.marquee{overflow:hidden;background:var(--card);border-block:1px solid var(--line)}
+#marquee{display:flex;gap:48px;width:max-content;padding:12px;animation:run var(--sp,30s) linear infinite}
+#marquee img{height:36px;filter:grayscale(1);opacity:.7}@keyframes run{to{transform:translateX(-50%)}}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}@media(min-width:768px){.grid{grid-template-columns:repeat(4,1fr);gap:20px}}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:pointer;position:relative;transition:.2s}
+.pcard:hover{transform:translateY(-4px);box-shadow:0 8px 20px -4px rgba(217,85,0,.2)}
+.pcard img,.ph{width:100%;aspect-ratio:1;object-fit:cover;background:#8884;display:block}
+.pcard .b{padding:10px}.badge-d{position:absolute;top:8px;left:8px;background:var(--or);color:#0D0D0D;border-radius:999px;padding:2px 10px;font-weight:700}
+.price{font-weight:700;font-size:20px;color:var(--or2)}.old{text-decoration:line-through;color:var(--tx2);font-size:13px}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}.kpi div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}.kpi b{font:700 36px 'Barlow Condensed'}
+.modal-jio{position:fixed;inset:0;background:#000c;z-index:50;overflow:auto;padding:16px}.modal-jio .card-box{max-width:720px;margin:0 auto}
+.gal img{width:100%;border-radius:14px;max-height:60vh;object-fit:contain;cursor:zoom-in}.gal.z img{cursor:zoom-out;max-height:none}
+#toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:99}#toast div{background:#0D0D0D;color:#fff;border-left:4px solid var(--or);padding:10px 16px;border-radius:10px;margin-top:6px}
+#loading{position:fixed;top:70px;right:16px;z-index:60;display:none}
+.tabs{display:flex;gap:8px;overflow:auto;margin:8px 0}.tabs button{background:var(--card);color:var(--tx);border:1px solid var(--line);border-radius:999px;padding:6px 16px;white-space:nowrap;font-weight:600}.tabs .on{background:var(--or);color:#0D0D0D;border-color:var(--or)}.tabs+div .thumb{height:40px;border-radius:6px}

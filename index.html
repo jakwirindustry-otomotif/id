@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JIO — Jakwir Industry Otomotif</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+</head><body>
+<nav class="topbar"><a class="brand" href="#" onclick="navigateTo('katalog');return false">JIO<i>O</i></a>
+ <input id="q" class="form-control search" placeholder="Cari produk…"><select id="cat" class="form-select cat"></select>
+ <button class="icon" id="theme" title="Mode gelap">◐</button><button class="icon" id="adminBtn">Admin</button></nav>
+<div id="loading" class="spinner-border text-warning"></div>
+
+<section id="katalog"><div id="banners" class="wrap"></div><div id="social" class="wrap social"></div>
+ <div class="marquee"><div id="marquee"></div></div>
+ <div class="wrap"><h2>PRODUK TERBARU</h2><div id="grid" class="grid"></div></div></section>
+
+<section id="login" hidden><form id="loginForm" class="card-box" style="max-width:380px;margin:60px auto">
+ <h2>LOGIN ADMIN</h2><input id="em" type="email" class="form-control mb-2" placeholder="Email" required>
+ <input id="pw" type="password" class="form-control mb-3" placeholder="Password" required><button class="btn-jio w-100">Masuk</button></form></section>
+
+<section id="admin" hidden><div class="wrap"><div class="d-flex justify-content-between"><h2>DASHBOARD ADMIN</h2><div><button class="btn-jio" id="newP">+ Tambah Produk</button> <button class="btn-ghost" id="logout">Keluar</button></div></div>
+ <div id="tabs" class="tabs"></div><div id="tab-produk"><div id="kpi" class="kpi"></div><div class="card-box"><canvas id="chart" height="90"></canvas></div>
+ <div class="card-box"><b>Insight Otomatis</b><p id="insight" class="mb-0"></p></div>
+ <div class="card-box table-responsive"><table class="table"><thead><tr><th>Produk</th><th>SKU</th><th>Harga</th><th>Status</th><th>Klik S/T</th><th></th></tr></thead><tbody id="ptable"></tbody></table></div></div><div id="tab-other" hidden></div></div></section>
+
+<div id="modal" class="modal-jio" hidden><div class="card-box" id="modalBody"></div></div>
+<div id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="app.js"></script></body></html>
