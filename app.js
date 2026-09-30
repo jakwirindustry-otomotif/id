@@ -1,5 +1,5 @@
 // ===== KONFIGURASI: isi sesuai Project Settings → API =====
-const SUPABASE_URL = 'https://mykqpjrpopwiuaybpyyz.supabase.co';
+const SUPABASE_URL = 'https://mykqpjrpopwiuaybpyyz.supabase.co/rest/v1/';
 const SUPABASE_ANON_KEY = 'sb_publishable_wMI4r-ij1-9nsFWkG22tYQ_9EDVL5LM';
 const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const $ = (id) => document.getElementById(id);
@@ -79,8 +79,8 @@ $('loginForm').onsubmit = (e) => { e.preventDefault(); run(async () => { ok(awai
 $('logout').onclick = async () => { await sb.auth.signOut(); navigateTo('katalog'); };
 async function enterAdmin() {
   const { data: { user } } = await sb.auth.getUser();
-  const pr = ok(await sb.from('profiles').select('role').eq('id', user.id).single());
-  if (pr.role !== 'admin') { await sb.auth.signOut(); return toast('Akun ini bukan admin.'); }
+  const pr = ok(await sb.from('profiles').select('role').eq('id', user.id).maybeSingle());
+  if (pr?.role !== 'admin') { await sb.auth.signOut(); return toast('Akun ini belum terdaftar sebagai admin. Jalankan perintah admin di SQL Editor (lihat PANDUAN.md langkah 3).'); }
   navigateTo('admin'); renderTabs(); loadAdmin();
 }
 async function loadAdmin() {
