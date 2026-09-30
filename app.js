@@ -1,6 +1,6 @@
 // ===== KONFIGURASI: isi sesuai Project Settings → API =====
-const SUPABASE_URL = 'ISI_PROJECT_URL';
-const SUPABASE_ANON_KEY = 'ISI_ANON_PUBLIC_KEY';
+const SUPABASE_URL = 'https://mykqpjrpopwiuaybpyyz.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_wMI4r-ij1-9nsFWkG22tYQ_9EDVL5LM';
 const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const $ = (id) => document.getElementById(id);
 const rp = (n) => 'Rp ' + Number(n).toLocaleString('id-ID');
